@@ -1,11 +1,19 @@
 import React from 'react';
+import '../../styles/Fieldset.scss';
 
-const Checkbox = ({ type, label, options }) => {
+const Checkbox = ({ type, label, additional: { options } }) => {
   return (
-    <div className={`display ${(!type || !label || !options.length) && 'none'}`}>
-      <h2>{ label }</h2>
-      { options.map(option => <label>{ option }<input type={ type } value={ option } /></label>) }
-    </div>
+    <fieldset className={`${(!type || !label || !options.length) && 'none'}`}>
+      <legend className="preview__label">{ label }</legend>
+      { options.map(option => <label 
+        className="fieldset__label">{ option }
+        <input 
+          type={ type } 
+          value={ option }
+          className="fieldset__input"
+        />
+      </label>) }
+    </fieldset>
   )
 }
 

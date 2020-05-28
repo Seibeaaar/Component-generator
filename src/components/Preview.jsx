@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Input from './previewComponents/Input';
 import Radio from './previewComponents/Radio';
 import Checkbox from './previewComponents/Checkbox';
+import Range from './previewComponents/Range';
 
 const Preview = ({ components }) => {
   return (
@@ -12,9 +13,11 @@ const Preview = ({ components }) => {
         {components.map(component => {
           switch (component.type) {
             case 'radio':
-              return <Radio type={component.type} label={component.label} options={component.additional.options} />
+              return <Radio type={component.type} label={component.label} additional={component.additional} />
             case 'checkbox':
-              return <Checkbox type={component.type} label={component.label} options={component.additional.options} />
+              return <Checkbox type={component.type} label={component.label} additional={component.additional} />
+            case 'range':
+              return <Range type={component.type} label={component.label} additional={component.additional} />
             default:
               return <Input type={component.type} label={component.label} />
           }

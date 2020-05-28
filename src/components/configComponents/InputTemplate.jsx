@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { changeType, changeLabel, toggleOptions, toggleRange } from '../../redux/actions';
-import Range from './Range';
+import RangeConfig from './RangeConfig';
 import Options from './Options';
 
 const InputTemplate = ({ id, changeLabel, changeType, toggleOptions, toggleRange }) => {
@@ -38,7 +38,7 @@ const InputTemplate = ({ id, changeLabel, changeType, toggleOptions, toggleRange
         <input type="text" placeholder="Message" onChange={e => setLabel(e.target.value)} className="config__input"/>
       </div>
       { (type === 'radio' || type === 'checkbox' ) && <Options id={id} /> }
-      { type === 'range' && <Range id={id} />}
+      { type === 'range' && <RangeConfig id={id} />}
     </>
   )
 }

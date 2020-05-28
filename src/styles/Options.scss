@@ -1,0 +1,20 @@
+@import './mixins.scss';
+
+.options__wrapper {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  .options__config {
+    display: flex;
+  }
+  .options__item, .options__input {
+    @include input;
+  }
+  .options__input {
+    width: 75px;
+  }
+  .options__add {
+    margin-left: 10px;
+  }
+}

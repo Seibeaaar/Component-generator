@@ -20,10 +20,10 @@ const rootReducer = (state = initialState, action) => {
       components[action.payload.id].additional = action.payload.condition ? { options: [] } : {};
       return {...state, components};
     case 'TOGGLE_RANGE':
-      components[action.payload.id].additional = action.payload.condition ? { range: { min: '', max: '', value: '', step: '' } } : {};
+      components[action.payload.id].additional = action.payload.condition ? {  min: '', max: '', step: '' } : {};
       return {...state, components};
     case 'GET_RANGE':
-      components[action.payload.id].additional.range = action.payload.config;
+      components[action.payload.id].additional = action.payload.config;
       return {...state, components};
     case 'GET_OPTIONS':
       components[action.payload.id].additional.options = action.payload.config;

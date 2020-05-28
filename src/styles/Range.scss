@@ -1,0 +1,16 @@
+@import './mixins.scss';
+
+.range__wrapper {
+  width: 300px;
+  .range__config {
+    margin: 20px 0;
+    .range__label {
+      display: flex;
+      justify-content: space-between;
+      .range__input {
+        @include input;
+        width: 75px;
+      }
+    }
+  }
+}

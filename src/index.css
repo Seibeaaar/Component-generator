@@ -13,6 +13,11 @@ label {
   display: block;
 }
 
-input, select {
-  display: block;
+button {
+  border: none;
+  background: transparent;
+}
+
+fieldset {
+  border: none;
 }
