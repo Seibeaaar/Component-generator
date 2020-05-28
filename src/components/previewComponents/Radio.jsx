@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/Fieldset.scss';
 
 const Radio = ({ type, label, additional: { options }  }) => {
@@ -18,6 +19,12 @@ const Radio = ({ type, label, additional: { options }  }) => {
       </label>) }
     </div>
   )
+}
+
+Radio.propTypes = {
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
 }
 
 export default Radio;

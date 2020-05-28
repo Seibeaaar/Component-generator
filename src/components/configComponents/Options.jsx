@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { AddCircleOutline, Check } from '@material-ui/icons';
 import { getOptions } from '../../redux/actions';
@@ -32,6 +33,11 @@ const Options = ({ id, getOptions }) => {
       </div> : <button onClick={() => setAddMode(true)} className="options__add"><AddCircleOutline /></button>}
     </div>
   )
+}
+
+Options.propTypes = {
+  id: PropTypes.number.isRequired,
+  getOptions: PropTypes.func.isRequired
 }
 
 export default connect(null, { getOptions })(Options);

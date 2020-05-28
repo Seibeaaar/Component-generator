@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../styles/Fieldset.scss';
 
 const Checkbox = ({ type, label, additional: { options } }) => {
@@ -16,6 +17,12 @@ const Checkbox = ({ type, label, additional: { options } }) => {
       </label>) }
     </div>
   )
+}
+
+Checkbox.propTypes = {
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
 }
 
 export default Checkbox;

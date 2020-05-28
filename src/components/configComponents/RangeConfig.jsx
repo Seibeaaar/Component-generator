@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getRange } from '../../redux/actions';
 import '../../styles/Range.scss';
@@ -33,6 +34,11 @@ const RangeConfig = ({ id, getRange }) => {
       </div>
     </div>
   )
+}
+
+RangeConfig.propTypes = {
+  id: PropTypes.number.isRequired,
+  getRange: PropTypes.func.isRequired
 }
 
 export default connect(null, { getRange })(RangeConfig);

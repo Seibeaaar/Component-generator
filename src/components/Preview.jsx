@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Input from './previewComponents/Input';
 import Radio from './previewComponents/Radio';
@@ -33,6 +34,10 @@ const mapStateToProps = state => {
   return {
     components: state.components
   }
+}
+
+Preview.propTypes = {
+  components: PropTypes.array.isRequired
 }
 
 export default connect(mapStateToProps, null)(Preview);
