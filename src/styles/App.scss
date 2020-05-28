@@ -1,0 +1,16 @@
+.app__container {
+  display: flex;
+  .app__component {
+    flex-basis: 50%;
+    height: 100vh;
+    padding: 10px;
+    border: 1px solid #000;
+    .component__wrapper {
+      width: 350px;
+      margin: 50px auto;
+    }
+  }
+  .none {
+    display: none;
+  }
+}
