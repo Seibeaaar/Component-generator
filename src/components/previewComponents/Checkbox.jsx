@@ -3,17 +3,18 @@ import '../../styles/Fieldset.scss';
 
 const Checkbox = ({ type, label, additional: { options } }) => {
   return (
-    <fieldset className={`${(!type || !label || !options.length) && 'none'}`}>
-      <legend className="preview__label">{ label }</legend>
+    <div className={`${(!type || !label || !options.length) && 'none'}`}>
+      <p className="preview__label">{ label }</p>
       { options.map(option => <label 
-        className="fieldset__label">{ option }
+        className="fieldset__label">
         <input 
           type={ type } 
           value={ option }
           className="fieldset__input"
         />
+        { option }
       </label>) }
-    </fieldset>
+    </div>
   )
 }
 

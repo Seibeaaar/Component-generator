@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 .app__container {
   display: flex;
   .app__component {
@@ -9,13 +11,19 @@
       max-width: 350px;
       margin: 50px auto;
     }
-    .preview__label {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 15px 0;
-    }
   }
-  .none {
-    display: none;
-  }
+}
+
+.preview__label {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.input {
+  @include config-input;
+}
+
+.none {
+  display: none;
 }

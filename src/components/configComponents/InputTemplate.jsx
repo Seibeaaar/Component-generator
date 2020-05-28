@@ -27,7 +27,7 @@ const InputTemplate = ({ id, changeLabel, changeType, toggleOptions, toggleRange
       <div className="config__wrapper">
         <select onChange={ e => {
           setType(e.target.value);
-        }} className="config__select">
+        }} className="config__select input">
           <option disabled selected>Type</option>
           <option value="text">Text</option>
           <option value="password">Password</option>
@@ -35,7 +35,7 @@ const InputTemplate = ({ id, changeLabel, changeType, toggleOptions, toggleRange
           <option value="radio">Radio</option>
           <option value="range">Range</option>
         </select>
-        <input type="text" placeholder="Message" onChange={e => setLabel(e.target.value)} className="config__input"/>
+        <input type="text" placeholder="Message" onChange={e => setLabel(e.target.value)} className="config__input input"/>
       </div>
       { (type === 'radio' || type === 'checkbox' ) && <Options id={id} /> }
       { type === 'range' && <RangeConfig id={id} />}

@@ -1,15 +1,11 @@
+@import './mixins.scss';
+
 .config__wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-  .config__input, .config__select {
-    border: 2px solid #000;
-    padding: 5px;
-    height: 30px;
-  }
   .config__input {
     flex-basis: 60%;
-    border-left: none;
+    border-left: transparent;
   }
   .config__select {
     flex-basis: 40%;

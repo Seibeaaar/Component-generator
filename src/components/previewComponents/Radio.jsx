@@ -3,17 +3,20 @@ import '../../styles/Fieldset.scss';
 
 const Radio = ({ type, label, additional: { options }  }) => {
   return (
-    <fieldset className={`${(!type || !label || !options.length) && 'none'}`}>
-      <legend className="preview__label">{ label }</legend>
-      { options.map(option => <label 
-        className="fieldset__label">{ option }
+    <div className={`${(!type || !label || !options.length) && 'none'}`}>
+      <p className="preview__label">{ label }</p>
+      { options.map((option, index) => <label 
+        className="fieldset__label"
+      >
         <input 
           type={ type } 
           value={ option }
+          name="radio-group"
           className="fieldset__input"
         />
+        { option }
       </label>) }
-    </fieldset>
+    </div>
   )
 }
 
