@@ -3,8 +3,8 @@
 .config__wrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-  &:last-child {
+  margin: 30px 0;
+  &:last-child, &:first-child {
     margin: 0;
   }
   .config__input {
