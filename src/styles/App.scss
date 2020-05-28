@@ -10,6 +10,11 @@
     .component__wrapper {
       max-width: 350px;
       margin: 50px auto;
+      .component__block {
+        max-height: 70vh;
+        margin-bottom: 30px;
+        overflow: auto;
+      }
     }
   }
 }

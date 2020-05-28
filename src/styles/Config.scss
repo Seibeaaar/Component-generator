@@ -3,6 +3,10 @@
 .config__wrapper {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
+  &:last-child {
+    margin: 0;
+  }
   .config__input {
     flex-basis: 60%;
     border-left: transparent;

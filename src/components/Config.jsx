@@ -10,7 +10,9 @@ const Config = ({ components, addComponent }) => {
     <div className="app__component">
       <h2>Components config</h2>
       <div className="component__wrapper">
-        { components.map((component, index) => <InputTemplate key={index} id={index} />)}
+        <div className="component__block">
+          { components.map((component, index) => <InputTemplate key={index} id={index} />)}
+        </div>
         <button className="config__add" onClick={() => addComponent({ type: '', label: '', additional: {} })}>
           Add component
         </button>
