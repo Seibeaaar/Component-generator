@@ -4,8 +4,9 @@
   display: flex;
   align-items: center;
   margin: 30px 0;
-  &:last-child, &:first-child {
+  &:last-child{
     margin: 0;
+    margin-top: 30px;
   }
   .config__input {
     flex-basis: 60%;
